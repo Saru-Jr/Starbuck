@@ -117,6 +117,7 @@ header {
     padding: 30px 40px;
     border: 2px solid yellow;
     box-shadow: 0 0 10px white;
+    animation: loginAnimation 0.3s linear forwards;
     h1 {
         font-size: 36px;
         text-align: center;
@@ -192,6 +193,18 @@ header {
     }
     .register-link p a:hover {
         text-decoration: underline;
+    }
+}
+
+@keyframes loginAnimation {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
