@@ -16,7 +16,7 @@
     <header>
         <img src="/siteteste/img/work!.png" alt="logo" class="logo">
         <ul class="nav-links">
-            <li class="active"><a href="#home">Home</a></li>
+            <li class="active"><a href="/siteteste/intex.html">Home</a></li>
             <li><a href="/siteteste/contact/contact.html">Contact</a></li>
             <li><a href="gift-card">Gift Cards</a></li>
             <li><a href="books">Books</a></li>
@@ -27,19 +27,25 @@
         </div>
     </header>
     <div class="login">
-        <h1>login</h1>
-        <p>User name</p>
-        <input type="text" placeholder="Monkey D Luffy">
-        <p>Email</p>
-        <input type="email" placeholder="MonkeydLuffi@gmail.com">
-        <p>Passeword</p>
-        <input type="password" name="" id="">
-        <p><a href="">forgot password</a></p>
-        <nav class="check">
-            <input type="checkbox">
-            <p>Accepte all conditions and politic</p>
-        </nav>
-        <button>Login</button>
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class="fas fa-user-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="3">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
     </div>
     <div class="bg">
         <img src="/siteteste/img/cityscape-anime-inspired-urban-area.jpg" alt="background" class="background">

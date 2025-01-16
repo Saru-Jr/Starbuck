@@ -40,6 +40,7 @@ header ul li a {
     font-weight: bold;
     font-size: 1.2em;
     position: relative;
+    animation: imgAnimation 0.5s linear forwards;
     i {
         padding: 10px;
     }
@@ -103,6 +104,19 @@ header {
     cursor: pointer;
     width: 50px;
     height: 100%;
+    animation: imgAnimation 0.5s linear forwards;
+}
+
+@keyframes imgAnimation {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 .home {
@@ -116,6 +130,7 @@ header {
     font-size: 2rem;
     letter-spacing: 1px;
     color: #ffc300;
+    animation: imgAnimation 0.2s linear forwards;
 }
 
 .home p {
@@ -124,7 +139,7 @@ header {
     font-family: sans-serif;
     font-size: 6rem;
     width: 600px;
-
+    animation: imgAnimation 0.8s linear forwards;
     span {
         font-weight: 700;
     }
@@ -136,6 +151,19 @@ header {
     align-items: center;
     margin-top: 30px;
     font-family: sans-serif;
+    animation: btnAnimation 0.2s linear forwards;
+}
+
+@keyframes btnAnimation {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
 }
 
 .home .btn .order {
@@ -197,6 +225,19 @@ header {
     border-radius: 25px;
     mask-image: linear-gradient(to bottom, black, transparent);
     -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    animation: cardAnimation 0.6s linear forwards;
+}
+
+@keyframes cardAnimation {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 .home .stb-desc {
@@ -211,13 +252,7 @@ header {
     justify-content: center;
     align-items: center;
     transform: rotate(-90deg) translateY(120%);
-
-    img {
-        width: 602px;
-        position: absolute;
-        filter: blur(3px) brightness(0.8);
-    }
-
+    animation: descAnimation 0.9s linear forwards;
     h1 {
         z-index: 2;
         color: white;
@@ -238,12 +273,35 @@ header {
     }
 }
 
+@keyframes descAnimation {
+    0% {
+        transform-origin: top right;
+        opacity: 0;
+    }
+
+    100% {    
+        opacity: 1;
+    }
+}
+
+
 .home .stb img {
     transform: translateX(-150px);
     z-index: 3;
     width: 550px;
     height: 100%;
     filter: brightness(0.8) drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+    animation: imgstbAnimation 0.9s linear forwards;
+}
+
+@keyframes imgstbAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .bg .background {
