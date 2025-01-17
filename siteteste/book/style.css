@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:500');
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius: 0px;
+    border: transparent;
+}
+
+body {
+    background-color: #202020;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    i {
+        padding: 10px;
+    }
+}
+
+header ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00a2ff;
+    transform-origin: bottom right;
+    transition: 400ms;
+}
+
+header ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header ul li.active a {
+    color: yellow;
+    font-weight: 800;
+    margin-left: 20px;
+}
+
+header ul li a:hover {
+    i {
+        color: red;
+        transform: translateY(-5px);
+        transition: 400ms;
+    }
+}
+
+header ul li a:not(:hover) {
+    transition: 400ms;
+
+    i {
+        transition: 400ms;
+    }
+}
+
+header .menu {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 40px 4%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 100%;
+}
+
+.rental-books {
+    position: absolute;
+}
+
+.rental {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    padding: 0px 50px;
+    font-family: sans-serif;
+    .rental-info {
+        width: 50%;
+        h1 {
+            font-size: 45px;
+        }
+    }
+    .rental-yt {
+        width: 40%;
+    }
+    .rental-yt iframe{
+        aspect-ratio: 16/9;
+    }
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.books {
+    padding: 50px 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px 50px;
+    width: 100%;
+    .card {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        border: 2px solid yellow;
+        margin-left: 80px;
+        color: white;
+        font-family: sans-serif;
+        width: 250px;
+        transition: all 300ms ease;
+        img {
+            transition: all 300ms ease;
+            width: 200px;
+            position: relative;
+            border-radius: 25px;
+        }
+        h1 {
+            transition: all 300ms ease;
+            text-align: center;
+            width: 200px;
+        }
+    }
+}
+
+.card:hover {
+    background: linear-gradient(30deg, rgba(255, 255, 0, 0.315), white);
+    img {
+        transform: translateY(-30px);
+        border-radius: 10px;
+    }
+    h1 {
+        color: black;
+    }
+}
+
+.bg .background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: -100;
+    filter: brightness(0.1);
+}
