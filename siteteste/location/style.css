@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:500');
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius: 0px;
+    border: transparent;
+}
+
+body {
+    background-color: #202020;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    i {
+        padding: 10px;
+    }
+}
+
+header ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00a2ff;
+    transform-origin: bottom right;
+    transition: 400ms;
+}
+
+header ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header ul li.active a {
+    color: yellow;
+    font-weight: 800;
+    margin-left: 20px;
+}
+
+header ul li a:hover {
+    i {
+        color: red;
+        transform: translateY(-5px);
+        transition: 400ms;
+    }
+}
+
+header ul li a:not(:hover) {
+    transition: 400ms;
+
+    i {
+        transition: 400ms;
+    }
+}
+
+header .menu {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 40px 4%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 100%;
+}
+
+
+
+.bg .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: -100;
+    filter: brightness(0.1);
+}
