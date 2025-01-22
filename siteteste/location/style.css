@@ -105,7 +105,86 @@ header {
     height: 100%;
 }
 
-
+.delivery {
+    position: absolute;
+    top: 120px;
+    padding: 0px 80px;
+    .info {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        .desc {
+            border: 2px yellow solid;
+            border-right: 0px;
+            border-radius: 55px;
+            padding: 50px 30px;
+            width: 50%;
+            font-family: sans-serif;
+            h1 {
+                color: #008a7e;
+                font-size: 45px;
+            }
+            p {
+                font-size: 20px;
+                padding: 20px 10px;
+            }
+            .containt {
+                display: flex;
+                padding: 30px 10px;
+                .card {
+                    transition: all 200ms ease;
+                    cursor: default;
+                    background-color: #008a7e;
+                    border: 2px #008a7e solid;
+                    padding: 30px 20px;
+                    margin-left: 20px;
+                    border-radius: 15px;
+                    text-align: center;
+                    i {
+                        font-size: 45px;
+                    }
+                    .icon-delivery {
+                        color: rgb(0, 68, 146); /* Couleur pour l'icône de livraison */
+                    }
+                    
+                    .icon-packaging {
+                        color: orange; /* Couleur pour l'icône d'emballage */
+                    }
+                    
+                    .icon-tracking {
+                        color: red; /* Couleur pour l'icône de suivi */
+                    }
+                    
+                    .icon-shipping {
+                        color: rgb(0, 90, 0); /* Couleur pour l'icône de livraison gratuite */
+                    }
+                }
+                .card:hover {
+                    background-color: #008a7e2f;
+                    .icon-delivery {
+                        color: white; /* Couleur pour l'icône de livraison */
+                    }
+                    
+                    .icon-packaging {
+                        color: white; /* Couleur pour l'icône d'emballage */
+                    }
+                    
+                    .icon-tracking {
+                        color: white; /* Couleur pour l'icône de suivi */
+                    }
+                    
+                    .icon-shipping {
+                        color: white; /* Couleur pour l'icône de livraison gratuite */
+                    }
+                }
+            }
+        }
+        img {
+            border-radius: 25px;
+            width: 35%;
+        }
+    }
+}
 
 .bg .background {
     position: absolute;
