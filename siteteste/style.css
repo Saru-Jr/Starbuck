@@ -312,3 +312,94 @@ header {
     z-index: -100;
     filter: brightness(0.1);
 }
+
+/* Styles pour les écrans de moins de 768 pixels de large */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0px 10px;
+        margin: 10px 0;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .logo {
+        width: 40px; /* Réduire la taille du logo */
+    }
+
+    .home {
+        position: absolute; /* Changer la position pour les petits écrans */
+        top: 100px; /* Réinitialiser la position */
+        left: 0; /* Réinitialiser la position */
+        padding: 20px; /* Ajouter un peu de padding */
+    }
+
+    .home h2 {
+        font-size: 1.5rem; /* Réduire la taille de la police */
+    }
+
+    .home p {
+        font-size: 3rem; /* Réduire la taille de la police */
+        width: 100%; /* Utiliser toute la largeur */
+    }
+
+    .home .btn {
+        flex-direction: column; /* Disposer les boutons verticalement */
+        align-items: center;
+    }
+
+    .home .btn .order,
+    .home .btn .delivery {
+        width: 100%; /* Utiliser toute la largeur */
+        margin: 20px 0; /* Espacement entre les boutons */
+    }
+
+    .card img {
+        width: 100%; /* Rendre l'image responsive */
+        margin-top: 20px;
+    }
+
+    .home .stb {
+        position: relative; /* Changer la position pour les petits écrans */
+        top: 0; /* Réinitialiser la position */
+        left: 0; /* Réinitialiser la position */
+        width: 100%; /* Utiliser toute la largeur */
+    }
+
+    .home .stb img {
+        display: none;
+    }
+}
+
+/* Styles pour les écrans de moins de 480 pixels de large */
+@media (max-width: 480px) {
+    header ul li a {
+        font-size: 1em; /* Réduire la taille de la police */
+    }
+
+    .home h2 {
+        font-size: 1.2rem; /* Réduire la taille de la police du titre */
+    }
+
+    .home p {
+        font-size: 2rem; /* Réduire la taille de la police du paragraphe */
+    }
+
+    .home .btn .order,
+    .home .btn .delivery {
+        font-size: 1rem; /* Réduire la taille de la police des boutons */
+    }
+}
