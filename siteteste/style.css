@@ -317,23 +317,20 @@ header {
 @media (max-width: 768px) {
     header {
         flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 20px;
+        align-items: center;
+        padding: 20px 30px;
     }
 
     header ul {
         display: flex;
-        flex-direction: column;
-        background-color: black;
         align-items: center;
         border-radius: 10px;
         padding: 0px 10px;
-        margin: 10px 0;
+        margin: 10px 0px;
     }
 
     header ul li {
-        margin: 10px 0;
+        margin: 10px 20px;
     }
 
     .logo {
@@ -357,13 +354,15 @@ header {
     }
 
     .home .btn {
-        flex-direction: column; /* Disposer les boutons verticalement */
+        flex-direction: row;
+        justify-content: space-between; /* Disposer les boutons verticalement */
         align-items: center;
+        padding: 20px 100px;
     }
 
     .home .btn .order,
     .home .btn .delivery {
-        width: 100%; /* Utiliser toute la largeur */
+        width: 40%; /* Utiliser toute la largeur */
         margin: 20px 0; /* Espacement entre les boutons */
     }
 
@@ -372,20 +371,42 @@ header {
         margin-top: 20px;
     }
 
-    .home .stb {
-        position: relative; /* Changer la position pour les petits écrans */
-        top: 0; /* Réinitialiser la position */
-        left: 0; /* Réinitialiser la position */
-        width: 100%; /* Utiliser toute la largeur */
+    .home .stb-desc {
+        display: none;
     }
 
     .home .stb img {
         display: none;
     }
+    .bg .background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        z-index: -100;
+        filter: brightness(0.1);
+    }
 }
 
 /* Styles pour les écrans de moins de 480 pixels de large */
 @media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #202020;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0px 10px;
+        margin: 10px 0px;
+    }
+    
     header ul li a {
         font-size: 1em; /* Réduire la taille de la police */
     }
@@ -398,8 +419,37 @@ header {
         font-size: 2rem; /* Réduire la taille de la police du paragraphe */
     }
 
+    .home .btn {
+        flex-direction: column; /* Disposer les boutons verticalement */
+        align-items: center;
+        padding: 20px 0px;
+    }
+
     .home .btn .order,
     .home .btn .delivery {
+        width: 100%;
         font-size: 1rem; /* Réduire la taille de la police des boutons */
+    }
+
+    .card img {
+        width: 100%; /* Rendre l'image responsive */
+        margin-top: 20px;
+    }
+
+    .home .stb-desc {
+        display: none;
+    }
+
+    .home .stb img {
+        display: none;
+    }
+
+    .bg .background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        z-index: -100;
+        filter: brightness(0.1);
     }
 }
