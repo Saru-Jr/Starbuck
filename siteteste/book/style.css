@@ -28,6 +28,11 @@ header ul {
     list-style: none;
 }
 
+header ul.mobile-menu {
+    transform: translateY(0px);
+    transition: all 0.5s ease;
+}
+
 header ul li {
     display: inline-block;
     margin: 0px 30px;
@@ -87,6 +92,10 @@ header ul li a:not(:hover) {
 
 header .menu {
     display: none;
+    color: white;
+    i {
+        font-size: 35px;
+    }
 }
 
 header {
@@ -191,4 +200,93 @@ header {
     background-size: cover;
     z-index: -100;
     filter: brightness(0.1);
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #202020;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0px 10px;
+        margin: 10px 0px;
+        transform: translateY(-250px);
+        transition: all 0.5s ease;
+    }
+
+    header ul li {
+        margin: 5px 0px;
+    }
+
+    header ul li a {
+        font-size: 1em; /* Réduire la taille de la police */
+    }
+
+    header .menu {
+        display: flex;
+        z-index: 100;
+    }
+
+    .rental {
+        margin-top: 100px;
+        flex-direction: column; /* Empile les éléments verticalement */
+        padding: 0px; /* Réduit le padding */
+        height: auto; /* Ajuste la hauteur pour les petits écrans */
+        .rental-info {
+            width: 100%; 
+            padding: 20px;
+        }
+        .rental-info h1 {
+            font-size: 30px; /* Réduit la taille de la police */
+        }
+    
+        .rental-yt {
+            width: 80%; /* Prend toute la largeur */
+            margin-top: 20px; /* Ajoute un espacement au-dessus */
+        }
+    }
+
+    .title {
+        margin-top: 50px;
+    }
+
+    .books {
+        margin-top: 50px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste la grille */
+        gap: 50px; /* Réduit l'espacement */
+        .card {
+            margin-left: 0; /* Supprime la marge gauche */
+            width: 100%; /* Prend toute la largeur disponible */
+        }
+    }
+
+    .card img {
+        width: 150px; /* Réduit la taille de l'image */
+    }
+
+    .card h1 {
+        width: auto; /* Ajuste la largeur du texte */
+        font-size: 20px; /* Réduit la taille de la police */
+    }
+
+    .title {
+        font-size: 30px; /* Réduit la taille de la police pour le titre */
+    }
+
+    .bg .background {
+        position: absolute;
+        height: 100%;
+        width: 200%;
+        background-size: cover;
+        z-index: -100;
+        filter: brightness(0.1);
+    }
 }

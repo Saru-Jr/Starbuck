@@ -28,6 +28,11 @@ header ul {
     list-style: none;
 }
 
+header ul.mobile-menu {
+    transform: translateY(0px);
+    transition: all 0.5s ease;
+}
+
 header ul li {
     display: inline-block;
     margin: 0px 30px;
@@ -88,6 +93,10 @@ header ul li a:not(:hover) {
 
 header .menu {
     display: none;
+    color: white;
+    i {
+        font-size: 35px;
+    }
 }
 
 header {
@@ -405,10 +414,17 @@ header {
         border-radius: 10px;
         padding: 0px 10px;
         margin: 10px 0px;
+        transform: translateY(-250px);
+        transition: all 0.5s ease;
     }
-    
+
     header ul li a {
         font-size: 1em; /* Réduire la taille de la police */
+    }
+
+    header .menu {
+        display: flex;
+        z-index: 100;
     }
 
     .home h2 {
@@ -447,7 +463,7 @@ header {
     .bg .background {
         position: absolute;
         height: 100%;
-        width: 100%;
+        width: 200%;
         background-size: cover;
         z-index: -100;
         filter: brightness(0.1);

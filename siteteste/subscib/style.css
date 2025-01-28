@@ -28,6 +28,11 @@ header ul {
     list-style: none;
 }
 
+header ul.mobile-menu {
+    transform: translateY(0px);
+    transition: all 0.5s ease;
+}
+
 header ul li {
     display: inline-block;
     margin: 0px 30px;
@@ -89,6 +94,10 @@ header ul li a:not(:hover) {
 
 header .menu {
     display: none;
+    color: white;
+    i {
+        font-size: 35px;
+    }
 }
 
 header {
@@ -225,4 +234,199 @@ header {
     background-size: cover;
     z-index: -100;
     filter: brightness(0.1);
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #202020;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0px 10px;
+        margin: 10px 0px;
+        transform: translateY(-250px);
+        transition: all 0.5s ease;
+    }
+
+    header ul li {
+        margin: 5px 0px;
+    }
+
+    header ul li a {
+        font-size: 1em; /* Réduire la taille de la police */
+    }
+
+    header .menu {
+        display: flex;
+        z-index: 100;
+    }
+
+    .sub-info {
+        position: absolute;
+        top: 20%;
+        left: 17%;
+        background-color: rgba(0, 0, 0, 0.288);
+        width: 900px; /* Largeur par défaut pour les écrans plus grands */
+        color: white;
+        font-family: sans-serif;
+        border-radius: 10px;
+        padding: 30px 40px;
+        border-bottom: 2px solid yellow;
+        transform: translateY(80px);
+    }
+    
+    .sub-info .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .sub-info .card h1 {
+        font-size: 66px; /* Taille de police par défaut */
+    }
+    
+    .sub-info .card p {
+        font-size: 26px; /* Taille de police par défaut */
+        margin: 30px 0px;
+    }
+    
+    .sub-info .card .btn {
+        width: 100%;
+        height: 45px;
+        background: white;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px white;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .sub-card {
+        position: absolute;
+        top: 100%;
+        background-color: rgba(0, 0, 0, 0.438);
+        width: 100%; /* Prend toute la largeur */
+        color: white;
+        font-family: sans-serif;
+        border-radius: 10px;
+        padding: 30px 150px; /* Ajustez le padding pour les petits écrans */
+        border: 2px solid yellow;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .sub-card .container {
+        transition: all 400ms ease;
+        border: 2px solid yellow;
+        background-color: black;
+        border-radius: 10px;
+        padding: 30px 40px;
+        width: 300px; /* Largeur par défaut */
+    }
+    
+    .sub-card .container h1 {
+        text-align: center;
+        padding-bottom: 30px;
+        border-bottom: 2px solid yellow;
+        font-size: 34px; /* Taille de police par défaut */
+    }
+    
+    .sub-card .container h2 {
+        text-align: center;
+        font-weight: 800;
+        padding: 20px 0px;
+    }
+    
+    .sub-card .container h3 {
+        padding: 20px 0px;
+    }
+    
+    .sub-card .container p {
+        padding: 20px 0px;
+    }
+    
+    .sub-card .container .btn {
+        width: 100%;
+        height: 45px;
+        background: white;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px white;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .sub-card .container:hover {
+        background-color: transparent;
+    }
+    
+    /* Styles pour les appareils mobiles */
+    @media (max-width: 768px) {
+        .sub-info {
+            top: 10%; /* Ajustez pour centrer sur mobile */
+            left: 5%; /* Ajustez la gauche pour centrer */
+            right: 5%; /* Ajustez la droite pour centrer */
+            width: auto; /* Utilisez une largeur automatique */
+            padding: 20px; /* Réduisez le padding */
+        }
+    
+        .sub-info .card h1 {
+            font-size: 36px; /* Réduisez la taille de la police du titre */
+        }
+    
+        .sub-info .card p {
+            font-size: 18px; /* Réduisez la taille de la police du paragraphe */
+        }
+    
+        .sub-card {
+            padding: 20px 10px; /* Réduisez le padding pour les petits écrans */
+            flex-direction: column; /* Colonne pour les petits écrans */
+        }
+    
+        .sub-card .container {
+            width: 100%; /* Utilisez toute la largeur */
+            margin-bottom: 20px; /* Ajoutez un espacement entre les conteneurs */
+        }
+    
+        .sub-card .container h1 {
+            font-size: 24px; /* Réduisez la taille de la police */
+        }
+    
+        .sub-card .container h2 {
+            font-size: 20px; /* Réduisez la taille de la police */
+        }
+    
+        .sub-card .container h3,
+        .sub-card .container p {
+            font-size: 16px; /* Réduisez la taille de la police */
+        }
+    
+        .sub-card .container .btn {
+            height: 40px; /* Ajustez la hauteur du bouton */
+            font-size: 14px; /* Réduisez la taille de la police du bouton */
+        }
+    }
+
+    .bg .background {
+        position: absolute;
+        height: 100%;
+        width: 200%;
+        background-size: cover;
+        z-index: -100;
+        filter: brightness(0.1);
+    }
 }

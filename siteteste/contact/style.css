@@ -28,6 +28,11 @@ header ul {
     list-style: none;
 }
 
+header ul.mobile-menu {
+    transform: translateY(0px);
+    transition: all 0.5s ease;
+}
+
 header ul li {
     display: inline-block;
     margin: 0px 30px;
@@ -40,6 +45,7 @@ header ul li a {
     font-weight: bold;
     font-size: 1.2em;
     position: relative;
+
     i {
         padding: 10px;
     }
@@ -87,6 +93,11 @@ header ul li a:not(:hover) {
 
 header .menu {
     display: none;
+    color: white;
+
+    i {
+        font-size: 35px;
+    }
 }
 
 header {
@@ -118,16 +129,19 @@ header {
     border: 2px solid yellow;
     box-shadow: 0 0 10px white;
     animation: loginAnimation 0.3s linear forwards;
+
     h1 {
         font-size: 36px;
         text-align: center;
     }
+
     .input-box {
         position: relative;
         width: 100%;
         height: 50px;
         margin: 30px 0;
     }
+
     .input-box input {
         width: 100%;
         height: 100%;
@@ -140,9 +154,11 @@ header {
         color: white;
         padding: 20px 45px 20px 20px;
     }
+
     .input-box input::placeholder {
         color: white;
     }
+
     .input-box i {
         position: absolute;
         right: 20px;
@@ -150,24 +166,29 @@ header {
         transform: translateY(-50%);
         font-size: 20px;
     }
+
     .remember-forgot {
         display: flex;
         justify-content: space-between;
         font-size: 14.5px;
         margin: -15px 0px 15px;
     }
+
     .remember-forgot label input {
         accent-color: white;
         margin-right: 3px;
     }
+
     .remember-forgot a {
         color: white;
         text-decoration: none;
     }
+
     .remember-forgot a:hover {
         color: #00a2ff;
         text-decoration: underline;
     }
+
     .btn {
         width: 100%;
         height: 45px;
@@ -181,16 +202,19 @@ header {
         color: #333;
         font-weight: 600;
     }
+
     .register-link {
         font-size: 14.5px;
         text-align: center;
         margin: 20px 0 15px;
     }
+
     .register-link p a {
         color: white;
         text-decoration: none;
         font-weight: 600;
     }
+
     .register-link p a:hover {
         text-decoration: underline;
     }
@@ -215,4 +239,81 @@ header {
     background-size: cover;
     z-index: -100;
     filter: brightness(0.1);
+}
+
+/* Styles pour les écrans de moins de 480 pixels de large */
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #202020;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0px 10px;
+        margin: 10px 0px;
+        transform: translateY(-250px);
+        transition: all 0.5s ease;
+    }
+
+    header ul li a {
+        font-size: 1em;
+        /* Réduire la taille de la police */
+    }
+    header ul li {
+        margin: 5px 0px;
+    }
+
+    header .menu {
+        display: flex;
+        z-index: 100;
+    }
+
+    .login {
+        top: 30%; /* Ajustez la position pour les petits écrans */
+        left: 5%; /* Ajustez la gauche pour les petits écrans */
+        right: 5%; /* Ajoutez un droit pour centrer le formulaire */
+        width: auto; /* Utilisez une largeur automatique */
+        padding: 20px; /* Réduisez le padding */
+    }
+
+    .login h1 {
+        font-size: 28px; /* Réduisez la taille de la police du titre */
+    }
+
+    .login .input-box {
+        height: 40px; /* Ajustez la hauteur des champs d'entrée */
+    }
+
+    .login .input-box input {
+        font-size: 14px; /* Réduisez la taille de la police des champs d'entrée */
+    }
+
+    .login .remember-forgot {
+        font-size: 12px; /* Réduisez la taille de la police pour les liens */
+    }
+
+    .login .btn {
+        height: 40px; /* Ajustez la hauteur du bouton */
+        font-size: 14px; /* Réduisez la taille de la police du bouton */
+    }
+
+    .login .register-link {
+        font-size: 12px; /* Réduisez la taille de la police pour le lien d'inscription */
+    }
+
+    .bg .background {
+        position: absolute;
+        height: 100%;
+        width: 200%;
+        background-size: cover;
+        z-index: -100;
+        filter: brightness(0.1);
+    }
 }
