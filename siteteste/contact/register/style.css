@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:500');
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius: 0px;
+    border: transparent;
+}
+
+body {
+    background-color: #202020;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.singin {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    background-color: rgba(0, 0, 0, 0.288);
+    width: 420px;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 10px;
+    padding: 30px 40px;
+    border: 2px solid yellow;
+    box-shadow: 0 0 10px white;
+    animation: loginAnimation 0.3s linear forwards;
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .input-box {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin: 30px 0;
+    }
+
+    .input-box input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        border: 2px solid yellow;
+        border-radius: 40px;
+        font-size: 16px;
+        color: white;
+        padding: 20px 45px 20px 20px;
+    }
+
+    .input-box input::placeholder {
+        color: white;
+    }
+
+    .input-box i {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
+
+    .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14.5px;
+        margin: -15px 0px 15px;
+    }
+
+    .remember-forgot label input {
+        accent-color: white;
+        margin-right: 3px;
+    }
+
+    .remember-forgot a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .remember-forgot a:hover {
+        color: #00a2ff;
+        text-decoration: underline;
+    }
+
+    .btn {
+        width: 100%;
+        height: 45px;
+        background: white;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px white;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+    }
+
+    .register-link {
+        font-size: 14.5px;
+        text-align: center;
+        margin: 20px 0 15px;
+    }
+
+    .register-link p a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .register-link p a:hover {
+        text-decoration: underline;
+    }
+}
+
+@keyframes loginAnimation {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.bg .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: -100;
+    filter: brightness(0.1);
+}
