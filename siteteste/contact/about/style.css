@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:500');
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius: 0px;
+    border: transparent;
+}
+
+body {
+    background-color: #202020;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul.mobile-menu {
+    transform: translateY(0px);
+    transition: all 0.5s ease;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    animation: imgAnimation 0.5s linear forwards;
+    i {
+        padding: 10px;
+    }
+}
+
+header ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00a2ff;
+    transform-origin: bottom right;
+    transition: 400ms;
+}
+
+header ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header ul li.active a {
+    color: yellow;
+    font-weight: 800;
+    margin-left: 20px;
+}
+
+header ul li a:hover {
+    i {
+        color: red;
+        transform: translateY(-5px);
+        transition: 400ms;
+    }
+}
+
+header ul li a:not(:hover) {
+    transition: 400ms;
+
+    i {
+        transition: 400ms;
+    }
+}
+
+header .menu {
+    display: none;
+    color: white;
+    i {
+        font-size: 35px;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 40px 4%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 100%;
+    animation: imgAnimation 0.5s linear forwards;
+}
+
+@keyframes imgAnimation {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.about {
+    position: absolute;
+    top: 200px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    font-family: sans-serif;
+    h1 {
+        color: #ffc300;
+        font-size: 65px;
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+    h2 {
+        margin: 20px 0px;
+        font-size: 45px;
+    }
+    p {
+        margin: 20px 20px;
+        font-size: 30px;
+        color: #00a2ff;
+        font-weight: 600;
+    }
+    .reseau {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px 20px 0px;
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 15px;
+            i {
+                font-size: 25px;
+            }
+        }
+        .insta {
+            transition: all 0.5s ease;
+            border: 2px solid orange;
+        }
+        .fb {
+            transition: all 0.5s ease;
+            border: 2px solid rgb(0, 68, 255);
+        }
+        .whatsapp {
+            transition: all 0.5s ease;
+            border: 2px solid green;
+        }
+        .email {
+            font-size: 15px;
+            border-bottom: 2px solid red;
+            i {
+                font-size: 25px;
+            }
+        }
+        .insta:hover {
+            border: 2px solid orange;
+            background: linear-gradient(60deg, orange, purple);
+        }
+        .fb:hover {
+            border: 2px solid rgb(0, 68, 255);
+            background-color: rgb(0, 68, 255);
+        }
+        .whatsapp:hover {
+            border: 2px solid green;
+            background-color: green;
+        }
+        .email {
+            font-size: 15px;
+            i {
+                font-size: 25px;
+            }
+        }
+    }
+    img{
+        width: 45%;
+        border-radius: 25px;
+    }
+}
+
+
+.bg .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: -100;
+    filter: brightness(0.1);
+}
