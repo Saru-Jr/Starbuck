@@ -26,7 +26,7 @@ body {
 
 .singin {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 35%;
     background-color: rgba(0, 0, 0, 0.288);
     width: 420px;
@@ -147,4 +147,80 @@ body {
     background-size: cover;
     z-index: -100;
     filter: brightness(0.1);
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #202020;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0px 10px;
+        margin: 10px 0px;
+        transform: translateY(-250px);
+        transition: all 0.5s ease;
+    }
+
+    header ul li a {
+        font-size: 1em;
+        /* Réduire la taille de la police */
+    }
+    header ul li {
+        margin: 5px 0px;
+    }
+
+    header .menu {
+        display: flex;
+        z-index: 100;
+    }
+
+    .singin {
+        top: 20%; /* Ajustez la position pour les petits écrans */
+        left: 5%; /* Ajustez la gauche pour les petits écrans */
+        right: 5%; /* Ajoutez un droit pour centrer le formulaire */
+        width: auto; /* Utilisez une largeur automatique */
+        padding: 20px; /* Réduisez le padding */
+    }
+
+    .singin h1 {
+        font-size: 28px; /* Réduisez la taille de la police du titre */
+    }
+
+    .singin .input-box {
+        height: 40px; /* Ajustez la hauteur des champs d'entrée */
+    }
+
+    .singin .input-box input {
+        font-size: 14px; /* Réduisez la taille de la police des champs d'entrée */
+    }
+
+    .singin .remember-forgot {
+        font-size: 12px; /* Réduisez la taille de la police pour les liens */
+    }
+
+    .singin .btn {
+        height: 40px; /* Ajustez la hauteur du bouton */
+        font-size: 14px; /* Réduisez la taille de la police du bouton */
+    }
+
+    .singin .register-link {
+        font-size: 12px; /* Réduisez la taille de la police pour le lien d'inscription */
+    }
+
+    .bg .background {
+        position: absolute;
+        height: 100%;
+        width: 200%;
+        background-size: cover;
+        z-index: -100;
+        filter: brightness(0.1);
+    }
 }
