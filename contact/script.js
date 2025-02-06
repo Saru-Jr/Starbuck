@@ -18,12 +18,12 @@ async function checkAuthStatus() {
                 const data = await reponse.json();
 
                 if (data.isLoggedIn) {
-                        window.location.href = "/siteteste/contact/about/about.html";
+                        window.location.href = "/contact/about/about.html";
                 } else {
                         if (data.hasAccount) {
-                                window.location.href = "/siteteste/contact/contact.html";
+                                window.location.href = "/contact/contact.html";
                         } else {
-                                window.location.href = "/siteteste/contact/register/register.html";
+                                window.location.href = "/contact/register/register.html";
                         }
                 }
         }catch (error) {
