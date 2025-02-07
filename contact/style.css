@@ -313,7 +313,6 @@ header {
         height: 100%;
         max-width: 200%;
         overflow: hidden;
-        background-size: cover;
         z-index: -100;
         filter: brightness(0.1);
     }
