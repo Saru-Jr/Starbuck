@@ -393,7 +393,8 @@ header {
     .bg .background {
         position: absolute;
         height: 100%;
-        width: 100%;
+        max-width: 200%;
+        overflow: hidden;
         background-size: cover;
         z-index: -100;
         filter: brightness(0.1);
@@ -467,6 +468,7 @@ header {
         position: absolute;
         height: 100%;
         width: 200%;
+        overflow: hidden;
         background-size: cover;
         z-index: -100;
         filter: brightness(0.1);
