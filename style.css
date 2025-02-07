@@ -467,7 +467,7 @@ header {
     .bg .background {
         position: absolute;
         height: 100%;
-        width: 200%;
+        max-width: 200%;
         overflow: hidden;
         background-size: cover;
         z-index: -100;
