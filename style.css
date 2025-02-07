@@ -324,6 +324,9 @@ header {
 
 /* Styles pour les écrans de moins de 768 pixels de large */
 @media (max-width: 768px) {
+    body {
+        width: 100%;
+    }
     header {
         flex-direction: row;
         align-items: center;
