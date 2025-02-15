@@ -4,3 +4,7 @@ const menu = document.querySelector(".menu")
         menu.addEventListener('click',()=>{
         navLinks.classList.toggle('mobile-menu')
         })
+
+function subcard() {
+        document.getElementById('subcard').scrollIntoView({behavior: 'smooth'});
+}
