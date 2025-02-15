@@ -1,8 +1,8 @@
 function order() {
-    window.location.href = "book/index.html";
+    window.location.href = "./book/index.html";
 }
 function delivery() {
-    window.location.href = "location/index.html"
+    window.location.href = "./location/index.html"
 }
 
 const menu = document.querySelector(".menu")
